@@ -3,7 +3,7 @@ DZAP Config Parser Example
 
 About
 -----
-This is a really simple gem to allow the definition and use of a configuration parser. The idea is, define new config file formats using a regexp and an Array of comment characters. It attempts the most simple of type casting based.
+This is a really simple gem to allow the definition and use of a configuration parser. The idea is, define new config file formats using a regexp and an Array of comment characters. It attempts the most simple of type casting.
 
 The gem is a framework around a `Format` class, requiring new formats to be subclasses that override the `initialize` and `parse!` methods.
 
@@ -45,7 +45,7 @@ You can access the information in the config now using either typical Hash acces
     config.debug_mode
     #=> false
 
-That's pretty much all there is to it.
+That's pretty much all there is to it. To access the documentation, you'll need the YARD gem. Simply run `yard` to compile the documentation, then open `doc/index.html` in your favorite web browser.
 
 License
 -------
