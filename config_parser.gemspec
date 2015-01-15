@@ -11,7 +11,8 @@ Gem::Specification.new do |s|
     "lib/config_parser/format.rb",
     "lib/config_parser/formats/dzap.rb",
     "lib/config_parser/parser.rb",
-    "LICENSE"
+    "LICENSE",
+    "README.md"
   ]
   s.license     = 'MIT'
 end

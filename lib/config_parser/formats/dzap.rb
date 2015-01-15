@@ -1,12 +1,16 @@
 module Formats
+  # The DZAP config file format.
   class DZAP < Format
     def initialize(file)
       @config             = {}
       @file               = file
+      # Pretty standard config file format
       @pattern            = /^([a-zA-Z_-]+)\s*=\s*["']?(.+)["']?$/
       @comment_characters = ['#']
     end
 
+    # Iterates over each line of the file, parsing and type casting as it can, complaining where it can't.
+    # @return [Boolean]
     def parse!
       File.open(@file).each_line do |line|
         next if @comment_characters.include?(line[0])
@@ -29,6 +33,7 @@ module Formats
           puts "Unable to parse line: #{line}"
         end
       end
+      true
     end
   end
 end
